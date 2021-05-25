@@ -11,8 +11,8 @@ function Registration(){
 </figure>
 
 <form class="form-registration-group" action="">
-  <input class="form-registration-input"  type="email" placeholder="Your email">
-  <input class="form-registration-submit-button" type="submit" value="Continue">
+  <input class="form-registration-input"  type="email" placeholder="Your email" />
+  <input class="form-registration-submit-button" type="submit" value="Continue" />
   <p class="or-divider"><span>or</span></p>
   
   <p class="form-registration-member-signin">Already a member? <a href="#">Sign in</a></p>
