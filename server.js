@@ -1,9 +1,8 @@
-import React from 'react';
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const User = require("./models/user.js");
 const app = express();

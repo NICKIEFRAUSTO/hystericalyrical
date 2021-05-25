@@ -1,27 +1,83 @@
-import React from "react";
+import React, { Component } from "react";
 import "./login.css";
- 
-function Registration(){
-  return( 
 
-<div class="form-registration">
-<figure class="form-registration-img">
-  <img src="../public/hystericalcolorful.jpg" alt="colorful artwork" />
-  <figcaption class="form-registration-img-caption">Experience everything Yeti+ has to offer through Yeti e-shoppe and our related apps.</figcaption>
-</figure>
+class Form extends Component {
+  // Setting the component's initial state
+  state = {
+    userName: "",
+    password: "",
+    email: ""
+  };
 
-<form class="form-registration-group" action="">
-  <input class="form-registration-input"  type="email" placeholder="Your email" />
-  <input class="form-registration-submit-button" type="submit" value="Continue" />
-  <p class="or-divider"><span>or</span></p>
-  
-  <p class="form-registration-member-signin">Already a member? <a href="#">Sign in</a></p>
-  <p class="form-registration-terms"><a href="#">Terms &amp; Conditions</a>|<a href="#">Privacy</a></p>
-</form>
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    let value = event.target.value;
+    const name = event.target.name;
 
-</div>
+    if (name === "password") {
+      value = value.substring(0, 15);
+    }
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  };
 
-  );
- }
+  handleFormSubmit = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+    if (!this.state.firstName || !this.state.lastName) {
+      alert("Fill out your first and last name please!");
+    } else if (this.state.password.length < 6) {
+      alert(
+        `Choose a more secure password ${this.state.firstName} ${this.state
+          .lastName}`
+      );
+    } else {
+      alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
+    }
 
-export default Registration;
+    this.setState({
+      userName: "",
+      password: "",
+      email: ""
+    });
+  };
+
+  render() {
+    // Notice how each input has a `value`, `name`, and `onChange` prop
+    return (
+      <div>
+        <p>
+          Hello {this.state.userName} 
+        </p>
+        <form className="form">
+          <input
+            value={this.state.userName}
+            name="userName"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="UserName"
+          />
+          <input
+            value={this.state.password}
+            name="password"
+            onChange={this.handleInputChange}
+            type="password"
+            placeholder="Password"
+          />
+          <input
+            value={this.state.email}
+            name="email"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Email"
+          />
+          <button onClick={this.handleFormSubmit}>Submit</button>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default Form;
