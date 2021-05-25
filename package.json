@@ -1,0 +1,26 @@
+{
+  "name": "hystericalyrical",
+  "version": "1.0.0",
+  "proxy": "http://localhost:3001/",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+    "seed": "node scripts/seedDB.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NICKIEFRAUSTO/hystericalyrical.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NICKIEFRAUSTO/hystericalyrical/issues"
+  },
+  "homepage": "https://github.com/NICKIEFRAUSTO/hystericalyrical#readme",
+  "dependencies": {
+    "mongoose": "^5.12.11"
+  }
+}
