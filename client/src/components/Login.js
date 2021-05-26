@@ -5,8 +5,8 @@ class Form extends Component {
   // Setting the component's initial state
   state = {
     userName: "",
-    password: "",
-    email: ""
+    password: ""
+    
   };
 
   handleInputChange = event => {
@@ -27,20 +27,19 @@ class Form extends Component {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
     if (!this.state.firstName || !this.state.lastName) {
-      alert("Fill out your first and last name please!");
+      alert("Please enter a username!");
     } else if (this.state.password.length < 6) {
       alert(
-        `Choose a more secure password ${this.state.firstName} ${this.state
-          .lastName}`
+        `Choose a more secure password ${this.state.userName}`
       );
     } else {
-      alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
+      alert(`Hello ${this.state.userName} `);
     }
 
     this.setState({
       userName: "",
       password: "",
-      email: ""
+      
     });
   };
 
@@ -66,13 +65,7 @@ class Form extends Component {
             type="password"
             placeholder="Password"
           />
-          <input
-            value={this.state.email}
-            name="email"
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="Email"
-          />
+          
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
       </div>
