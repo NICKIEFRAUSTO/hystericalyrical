@@ -7,6 +7,9 @@ router.get("/", sessionChecker, (req, res) => {
     res.redirect("/login");
   });
 
+  
+
+
   router
   .route("/Signup")
   .post((req, res) => {

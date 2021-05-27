@@ -5,7 +5,8 @@ import API from "../util/api";
 function Signup() {
   const [formObject, setFormObject] = useState({
     username:"", 
-    password:""})
+    password:""
+  })
 
 
   const handleFormSubmit = e => {
@@ -30,9 +31,8 @@ function Signup() {
             placeholder="UserName"
           />
           <input
-            
-            name="password"
             onChange={handleInputChange}
+            name="password"
             type="password"
             placeholder="Password"
           />
