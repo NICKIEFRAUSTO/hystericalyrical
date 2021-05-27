@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { User } = require('../../models/user');
+const  User = require('../../models/user');
 
 router.post('/login', async (req, res) => {
   try {
     console.log("helloWorld")
-    console.log(req.body)
+    console.log("req.body", req.body)
     // Find the user who matches the posted e-mail address
     const userData = await User.findOne({ username: req.body.username  });
       console.log(userData)
@@ -34,6 +34,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });
