@@ -9,5 +9,9 @@ export default {
   // Saves a user to the database
   saveUser: function(userData) {
     return axios.post("/Signup", userData);
+  },
+  
+  saveBlanks: function(blankData){
+    return axios.post("/Blanksform", blankData)
   }
 };
