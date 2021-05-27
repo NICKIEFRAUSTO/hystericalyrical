@@ -4,12 +4,11 @@ import "./style.css"
 function Home(){ 
 return(
 
-<header class="subnav-hero-section">
-  <h1 class="subnav-hero-headline">Hystericalyrical <small>by Frausto, Tomlinson and Vargas</small></h1>
+<header class="subnav-hero-section font2">
+  <h1 class="subnav-hero-headline ">Hystericalyrical <br></br> <small>by: Frausto, Tomlinson and Vargas</small></h1>
   <ul class="subnav-hero-subnav" >
-    <li><a href="#">Take Action!</a></li>
-    <li><a href="#" class="is-active">Carpe Diem!</a></li>
-    <li><a target="_blank" href="https://zurb.com/responsive">Just do it!</a></li>
+    <li><a href="#">Login to play</a></li>
+    <li><a href="#">Sign up</a></li>
   </ul>
   
 </header>
