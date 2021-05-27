@@ -25,7 +25,6 @@ function Signup() {
       <form className="form">{handlesubmit}
           <input
             onChange={handleInputChange}
-            <div className="success-message">Success! Thank you for Signingup</div>
             name="username"
             type="text"
             placeholder="UserName"

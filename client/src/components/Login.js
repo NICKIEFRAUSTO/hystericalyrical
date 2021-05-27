@@ -30,9 +30,10 @@ const handleSubmit=(event)=>{
 
         <input
         onChange={handlePasswordInputChange} 
-        value= {values.username}
+        value= {values.password}
         className="form-field"
         placeholder= "password"
+        type= "password"
         name="password"/>
       </form>
     </div>
