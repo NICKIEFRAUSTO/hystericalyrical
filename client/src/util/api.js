@@ -10,8 +10,14 @@ export default {
   saveUser: function(userData) {
     return axios.post("/Signup", userData);
   },
+
+
+  login: function(userData){
+return axios.post("/login", userData);
+  },
   
   saveBlanks: function(blankData){
     return axios.post("/Blanksform", blankData)
+
   }
 };

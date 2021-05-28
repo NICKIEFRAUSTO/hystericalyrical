@@ -6,7 +6,8 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const PORT = process.env.PORT || 3001;
 const router = require("./routes/login-out");
-const User = require("./models/user.js");
+const userRouter = require("./controllers/api/userRoutes");
+const user = require("./models/user.js");
 const app = express();
 // -----------------------------set morgan to log info about our requests for development use.
 app.use(morgan("dev"));
@@ -44,7 +45,9 @@ app.use((req, res, next) => {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-app.use(router)
+app.use(router);
+app.use(userRouter);
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hystericaldb", { useNewUrlParser: true });
 
 app.post("/submit", ({ body }, res) => {
