@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 
 function App() {
   return (
+
     <Router>
       <div>
        <Navbar />
@@ -25,6 +26,7 @@ function App() {
     </Router>
    
    
+
   );
 }
 
