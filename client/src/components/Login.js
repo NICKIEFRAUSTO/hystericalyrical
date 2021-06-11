@@ -18,27 +18,63 @@ const handleSubmit=(event)=>{
   
 }
 
-  return(
-    <div className= "form-container">
-      <form className="login-form">{handleSubmit}        
-      <input 
-        onChange={handleUserNameInputChange}
-       
-        className="form-field"
-        placeholder= "username"
-        name="username"/>
+  return( 
+  <>
 
-        <input
+  <form>{handleSubmit}
+
+  <div className="form-group row">
+      <label 
+        for="inputEmail3" 
+        className="col-sm-2 col-form-label">
+        username
+      </label>
+
+      <div className="col-sm-10">
+        <input 
+          onChange={handleUserNameInputChange} 
+          value ={values.username}
+          type="text" 
+          className="form-control" 
+          id="inputUserName"/>
+      </div>
+  </div>
+
+  <div className="form-group row">
+      <label 
+        for="inputPassword3" 
+        className="col-sm-2 col-form-label">
+        Password
+      </label>
+
+      <div className="col-sm-10">
+        <input 
         onChange={handlePasswordInputChange} 
-        
-        className="form-field"
-        placeholder= "password"
-        type= "password"
-        name="password"/>
-      </form>
-    </div>
+        value={values.password}
+        type="password" 
+        className="form-control" 
+        id="inputPassword3"/>
+      </div>
+  </div>
+
+  <div className="form-group row">
+      <div className="col-sm-10">
+          <button onClick={handleSubmit} 
+          type="submit" 
+          className="btn btn-warning text-success">
+          <strong>Sign in</strong>
+          </button>
+      </div>
+  </div>
+
+</form>
+
+</ >
+
   )
 }
 
 export default Login;
 
+
+    

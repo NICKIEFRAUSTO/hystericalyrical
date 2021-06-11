@@ -1,24 +1,22 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Login from "./components/Login";
 import Jumbotron from "./components/Jumbotron";
-import Navbar from "./components/Navbar";
+import Login from "./components/Login";
 import Signup from "./components/Signup";
+
 
 function App() {
   return (
     <Router>
-        <div>
+      <div>
         <Jumbotron />
-        <Switch>    
-        <Route exact path="/Login">
-        <Login />
-        </Route>
-        <Route exact path="/Signup">
-        <Signup />
-        </Route>
-        </Switch>
-        </div>
+          <Switch>   
+          <Route exact path="/Login">
+          <Login /></Route>
+          <Route exact path="/Signup">
+          <Signup /></Route>
+          </Switch>
+      </div>
     </Router>
   );
 }
