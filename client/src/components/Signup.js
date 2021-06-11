@@ -24,6 +24,7 @@ function Signup() {
       <form className="form">
         <input
           onChange={handleInputChange}
+          
           name="username"
           type="text"
           placeholder="UserName"

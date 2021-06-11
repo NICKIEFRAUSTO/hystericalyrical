@@ -13,7 +13,7 @@ return(
         <Link to="/Login" className="nav-link text-success active" ><strong>LogIn to Play</strong></Link>
     </li>
     <li className="nav-item">
-        <a className="nav-link text-success" href="#"><strong>Create Account</strong></a>
+        <Link to="/Signup" className="nav-link text-success" ><strong>Create Account</strong></Link>
     </li>
     
     </ul>
