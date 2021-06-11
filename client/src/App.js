@@ -3,26 +3,22 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import Jumbotron from "./components/Jumbotron";
 import Navbar from "./components/Navbar";
-import Signup from "./pages/Signup";
+import Signup from "./components/Signup";
 
 function App() {
   return (
     <Router>
-      <div>
+        <div>
         <Jumbotron />
-        
-        <Switch>
-                 
-          <Route exact path="/Login">
-            <Login />
-          </Route>
-
-          <Route exact path="/Signup">
-            <Signup />
-          </Route>
-          
+        <Switch>    
+        <Route exact path="/Login">
+        <Login />
+        </Route>
+        <Route exact path="/Signup">
+        <Signup />
+        </Route>
         </Switch>
-      </div>
+        </div>
     </Router>
   );
 }
