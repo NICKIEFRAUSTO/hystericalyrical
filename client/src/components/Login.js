@@ -27,7 +27,7 @@ const handleSubmit=(event)=>{
       <label 
         for="inputEmail3" 
         className="col-sm-2 col-form-label">
-        username
+        UserName
       </label>
 
       <div className="col-sm-10">
@@ -36,7 +36,8 @@ const handleSubmit=(event)=>{
           value ={values.username}
           type="text" 
           className="form-control" 
-          id="inputUserName"/>
+          id="inputUserName"
+          />
       </div>
   </div>
 
@@ -53,7 +54,8 @@ const handleSubmit=(event)=>{
         value={values.password}
         type="password" 
         className="form-control" 
-        id="inputPassword3"/>
+        id="inputPassword3"
+        />
       </div>
   </div>
 

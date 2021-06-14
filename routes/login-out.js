@@ -24,7 +24,7 @@ router.get("/", sessionChecker, (req, res) => {
       } else {
           console.log(docs)
         req.session.user = docs;
-        res.redirect("/home");
+        res.redirect("/");
       }
     });
   });

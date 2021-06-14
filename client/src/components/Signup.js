@@ -45,7 +45,6 @@ function Signup() {
           type="text" 
           className="form-control" 
           id="inputUserName"
-          placeholder="UserName"
           />
       </div>
   </div>
@@ -64,7 +63,6 @@ function Signup() {
         type="password" 
         className="form-control" 
         id="inputPassword3"
-        placeholder="Password"
         />
       </div>
   </div>
