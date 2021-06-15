@@ -12,7 +12,7 @@ const app = express();
 // -----------------------------set morgan to log info about our requests for development use.
 app.use(morgan("dev"));
 
-// -----------------------------------------------initialize body-parser to parse incoming parameters requests to req.body
+// -----------------------------------------------initialize body-parser to parse incoming parameters requests to req.body *depricated
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // ------------------------------------------initialize cookie-parser to allow us access the cookies stored in the browser.
@@ -35,7 +35,7 @@ app.use(
 // -----------------------------This usually happens when you stop your express server after login, your cookie still remains saved in the browser.
 app.use((req, res, next) => {
   if (req.cookies.user_sid && !req.session.user) {
-    res.clearCookie("user_sid");
+    res.redirect('/')
   }
   next();
 });

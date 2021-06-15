@@ -13,6 +13,7 @@ function Signup() {
     e.preventDefault();
     console.log("username is " + formObject.username);
     console.log("password is " + formObject.password);
+    
     API.saveUser(formObject);
   };
 

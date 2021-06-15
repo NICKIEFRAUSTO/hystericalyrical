@@ -8,7 +8,7 @@ return(
   <div className="jumbotron bg-success" >
   <h1 className="display-4 text-center">Hystericalyrical</h1>
   <p className="lead text-center">A fun story building game.</p>
-  {/* <hr className="my-4" /> */}
+  
   <p></p>
   <Navbar />
 </div>
