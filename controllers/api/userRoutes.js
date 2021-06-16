@@ -3,7 +3,6 @@ const  User = require('../../models/user');
 
 router.post('/login', async (req, res) => {
   try {
-    console.log("helloWorld")
     console.log("req.body", req.body)
     // Find the user who matches the posted e-mail address
     const userData = await User.findOne({ username: req.body.username  });
@@ -16,7 +15,7 @@ router.post('/login', async (req, res) => {
     }
 
     // Verify the posted password with the password store in the database
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword = await userData.comparePassword(req.body.password);
     console.log(validPassword)
     if (!validPassword) {
       res

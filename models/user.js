@@ -30,8 +30,8 @@ bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
 
 
 });
-
-UserSchema.methods.checkPassword = function checkPassword(loginPw) {
+//  compre password//
+UserSchema.methods.comparePassword = function comparePassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 
